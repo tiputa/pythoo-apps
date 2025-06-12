@@ -1,0 +1,36 @@
+import time
+import random
+
+best = 99
+while True:
+
+# 5-15秒の間でランダムな数字を選んで覚えておく
+ num = random.randint(5,15)
+
+# 反応速度を測定します。と表示して、エンターを押したら次へ進む
+ input("反応速度を測定します。準備ができたらエンターキーを押してください")
+
+# 記憶した時間（num秒）、次のステップに進まずに待機
+ time.sleep(num)
+
+# 開始時間を覚えておく
+ start_time = time.time()
+
+# !!!!! と表示して、エンターを押したら次へ進む(エンターが押されるまで待つ)
+ input("!!!!!")
+
+ end_time = time.time()
+
+ a = end_time - start_time 
+
+ a = round(a,4)
+ if best >= a:
+    best = a
+ print(a)
+ r = input("もう一度しますか？YES or NO")
+ if r == ("YES"):
+  True
+ else:
+  print("終わり")
+  print(best)
+  break
