@@ -21,4 +21,3 @@ else:
     print("不正解")
 print(f"{ken}の名産品は{dict[ken]}です")
 print("お疲れ様でした")
-print("次の問題に行きます")
